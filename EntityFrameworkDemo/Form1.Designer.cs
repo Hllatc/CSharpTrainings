@@ -59,6 +59,7 @@
             this.btn_delete.TabIndex = 15;
             this.btn_delete.Text = "Remove";
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // groupBox2
             // 
@@ -84,6 +85,7 @@
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtNameUpdate
             // 
@@ -157,6 +159,7 @@
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // tbxName
             // 
@@ -216,6 +219,7 @@
             this.dgwProducts.RowTemplate.Height = 24;
             this.dgwProducts.Size = new System.Drawing.Size(877, 210);
             this.dgwProducts.TabIndex = 12;
+            this.dgwProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellClick);
             // 
             // Form1
             // 
