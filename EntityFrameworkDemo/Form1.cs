@@ -27,7 +27,11 @@ namespace EntityFrameworkDemo
         {
             dgwProducts.DataSource = _productdal.getAll();
         }
-
+        private void SearchData(string key)
+        {
+            var datalist=_productdal.getByName(key);
+            dgwProducts.DataSource = datalist;
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             _productdal.Add(new Product
@@ -71,6 +75,11 @@ namespace EntityFrameworkDemo
             });
             LoadData();
             MessageBox.Show("deleted!");
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchData(txtSearch.Text);
         }
     }
 }
